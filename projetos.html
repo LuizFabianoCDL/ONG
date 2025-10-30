@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça nossos projetos sociais e saiba como doar">
+    <meta name="keywords" content="projetos sociais, doação, voluntariado, ONG">
+    <title>Projetos Sociais - ONG Esperança Solidária</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo/logo-ong.png" alt="Logo ONG Esperança Solidária">
+                <h1>Esperança Solidária</h1>
+            </div>
+            <nav class="nav-principal">
+                <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html" class="ativo">Projetos</a></li>
+                    <li><a href="cadastro.html">Seja Voluntário</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Projetos -->
+    <section class="banner-interno">
+        <div class="container">
+            <h2>Nossos Projetos Sociais</h2>
+            <p>Conheça as iniciativas que estão transformando vidas em diversas comunidades</p>
+        </div>
+    </section>
+
+    <!-- Filtros de Projetos -->
+    <section class="filtros">
+        <div class="container">
+            <h3>Filtrar por Categoria</h3>
+            <div class="filtros-botoes">
+                <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="educacao">Educação</button>
+                <button class="filtro-btn" data-categoria="saude">Saúde</button>
+                <button class="filtro-btn" data-categoria="assistencia">Assistência Social</button>
+                <button class="filtro-btn" data-categoria="cultura">Cultura</button>
+                <button class="filtro-btn" data-categoria="meio-ambiente">Meio Ambiente</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de Projetos -->
+    <section class="projetos-lista">
+        <div class="container">
+            <article class="projeto-detalhado" id="projeto1" data-categoria="educacao">
+                <div class="projeto-imagem">
+                    <img src="images/projetos/projeto1.jpg" alt="Crianças em sala de aula">
+                </div>
+                <div class="projeto-info">
+                    <span class="badge">Educação</span>
+                    <h3>Educação para Todos</h3>
+                    <p class="projeto-descricao">O projeto oferece aulas de reforço escolar gratuitas para crianças e adolescentes em situação de vulnerabilidade social. Com foco em português e matemática, já atendemos mais de 500 estudantes.</p>
+                    <div class="projeto-impacto">
+                        <h4>Impacto Social</h4>
+                        <ul>
+                            <li>✓ 500+ crianças atendidas</li>
+                            <li>✓ 85% de melhora no desempenho escolar</li>
+                            <li>✓ 15 voluntários professores</li>
+                        </ul>
+                    </div>
+                    <div class="projeto-acoes">
+                        <a href="cadastro.html" class="btn btn-primary">Quero Ser Voluntário</a>
+                        <a href="#doar" class="btn btn-secondary">Apoiar Projeto</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projeto-detalhado" id="projeto2" data-categoria="saude">
+                <div class="projeto-imagem">
+                    <img src="images/projetos/projeto2.jpg" alt="Atendimento médico comunitário">
+                </div>
+                <div class="projeto-info">
+                    <span class="badge">Saúde</span>
+                    <h3>Saúde Comunitária</h3>
+                    <p class="projeto-descricao">Atendimento médico, odontológico e psicológico gratuito em comunidades carentes. Realizamos campanhas de vacinação, exames preventivos e distribuição de medicamentos.</p>
+                    <div class="projeto-impacto">
+                        <h4>Impacto Social</h4>
+                        <ul>
+                            <li>✓ 3.000+ atendimentos realizados</li>
+                            <li>✓ 12 profissionais voluntários</li>
+                            <li>✓ 5 campanhas de vacinação</li>
+                        </ul>
+                    </div>
+                    <div class="projeto-acoes">
+                        <a href="cadastro.html" class="btn btn-primary">Quero Ser Voluntário</a>
+                        <a href="#doar" class="btn btn-secondary">Apoiar Projeto</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projeto-detalhado" id="projeto3" data-categoria="assistencia">
+                <div class="projeto-imagem">
+                    <img src="images/projetos/projeto3.jpg" alt="Distribuição de cestas básicas">
+                </div>
+                <div class="projeto-info">
+                    <span class="badge">Assistência Social</span>
+                    <h3>Alimenta Solidário</h3>
+                    <p class="projeto-descricao">Combate à fome através da distribuição de cestas básicas e refeições quentes para famílias em situação de insegurança alimentar. Atuamos em 8 comunidades da região metropolitana.</p>
+                    <div class="projeto-impacto">
+                        <h4>Impacto Social</h4>
+                        <ul>
+                            <li>✓ 800 famílias beneficiadas mensalmente</li>
+                            <li>✓ 2.500 refeições servidas por semana</li>
+                            <li>✓ 40 voluntários na cozinha</li>
+                        </ul>
+                    </div>
+                    <div class="projeto-acoes">
+                        <a href="cadastro.html" class="btn btn-primary">Quero Ser Voluntário</a>
+                        <a href="#doar" class="btn btn-secondary">Apoiar Projeto</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projeto-detalhado" id="projeto4" data-categoria="cultura">
+                <div class="projeto-imagem">
+                    <img src="images/projetos/projeto4.jpg" alt="Oficina de música">
+                </div>
+                <div class="projeto-info">
+                    <span class="badge">Cultura</span>
+                    <h3>Arte e Cultura Viva</h3>
+                    <p class="projeto-descricao">Oficinas gratuitas de música, dança, teatro e artes plásticas para crianças e jovens. Promovemos apresentações culturais e incentivamos talentos locais.</p>
+                    <div class="projeto-impacto">
+                        <h4>Impacto Social</h4>
+                        <ul>
+                            <li>✓ 300 jovens nas oficinas</li>
+                            <li>✓ 20 apresentações realizadas</li>
+                            <li>✓ 8 instrutores voluntários</li>
+                        </ul>
+                    </div>
+                    <div class="projeto-acoes">
+                        <a href="cadastro.html" class="btn btn-primary">Quero Ser Voluntário</a>
+                        <a href="#doar" class="btn btn-secondary">Apoiar Projeto</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projeto-detalhado" id="projeto5" data-categoria="meio-ambiente">
+                <div class="projeto-imagem">
+                    <img src="images/projetos/projeto5.jpg" alt="Plantio de árvores">
+                </div>
+                <div class="projeto-info">
+                    <span class="badge">Meio Ambiente</span>
+                    <h3>Natureza Sustentável</h3>
+                    <p class="projeto-descricao">Ações de educação ambiental, plantio de árvores, coleta seletiva e limpeza de áreas públicas. Trabalhamos pela conscientização ecológica nas escolas e comunidades.</p>
+                    <div class="projeto-impacto">
+                        <h4>Impacto Social</h4>
+                        <ul>
+                            <li>✓ 2.000 árvores plantadas</li>
+                            <li>✓ 10 escolas com educação ambiental</li>
+                            <li>✓ 5 toneladas de resíduos coletados</li>
+                        </ul>
+                    </div>
+                    <div class="projeto-acoes">
+                        <a href="cadastro.html" class="btn btn-primary">Quero Ser Voluntário</a>
+                        <a href="#doar" class="btn btn-secondary">Apoiar Projeto</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Seção Voluntariado -->
+    <section class="voluntariado" id="voluntariado">
+        <div class="container">
+            <h2>Como Funciona o Voluntariado</h2>
+            <div class="voluntariado-grid">
+                <div class="voluntariado-passo">
+                    <div class="passo-numero">1</div>
+                    <h3>Cadastre-se</h3>
+                    <p>Preencha o formulário de cadastro informando suas habilidades e disponibilidade.</p>
+                </div>
+                <div class="voluntariado-passo">
+                    <div class="passo-numero">2</div>
+                    <h3>Escolha um Projeto</h3>
+                    <p>Nossa equipe entrará em contato para apresentar as oportunidades disponíveis.</p>
+                </div>
+                <div class="voluntariado-passo">
+                    <div class="passo-numero">3</div>
+                    <h3>Participe da Capacitação</h3>
+                    <p>Oferecemos treinamento inicial para todos os novos voluntários.</p>
+                </div>
+                <div class="voluntariado-passo">
+                    <div class="passo-numero">4</div>
+                    <h3>Faça a Diferença</h3>
+                    <p>Comece a atuar e transformar vidas junto com nossa equipe.</p>
+                </div>
+            </div>
+            <div class="centralizado">
+                <a href="cadastro.html" class="btn btn-primary btn-grande">Quero me Cadastrar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Doações -->
+    <section class="doacoes" id="doar">
+        <div class="container">
+            <h2>Como Doar</h2>
+            <p class="texto-centralizado">Sua contribuição mantém nossos projetos ativos e transforma vidas</p>
+            
+            <div class="doacoes-grid">
+                <article class="doacao-tipo">
+                    <h3>Doação Única</h3>
+                    <img src="images/doacoes/doacao-unica.jpg" alt="Ilustração de doação única">
+                    <p>Faça uma doação pontual de qualquer valor. Toda contribuição é bem-vinda!</p>
+                    <div class="valores-sugeridos">
+                        <button class="valor-btn">R$ 50</button>
+                        <button class="valor-btn">R$ 100</button>
+                        <button class="valor-btn">R$ 200</button>
+                        <button class="valor-btn">Outro valor</button>
+                    </div>
+                </article>
+
+                <article class="doacao-tipo">
+                    <h3>Doação Recorrente</h3>
+                    <img src="images/doacoes/doacao-recorrente.jpg" alt="Ilustração de doação mensal">
+                    <p>Contribua mensalmente e nos ajude a planejar ações de longo prazo.</p>
+                    <div class="valores-sugeridos">
+                        <button class="valor-btn">R$ 30/mês</button>
+                        <button class="valor-btn">R$ 50/mês</button>
+                        <button class="valor-btn">R$ 100/mês</button>
+                        <button class="valor-btn">Outro valor</button>
+                    </div>
+                </article>
+
+                <article class="doacao-tipo">
+                    <h3>Doação de Materiais</h3>
+                    <img src="images/doacoes/doacao-materiais.jpg" alt="Ilustração de doação de materiais">
+                    <p>Aceitamos doações de alimentos, roupas, livros, brinquedos e materiais escolares.</p>
+                    <ul class="lista-materiais">
+                        <li>Alimentos não perecíveis</li>
+                        <li>Roupas em bom estado</li>
+                        <li>Material escolar</li>
+                        <li>Livros e brinquedos</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="dados-bancarios">
+                <h3>Dados para Transferência</h3>
+                <div class="banco-info">
+                    <p><strong>Banco:</strong> Banco do Brasil</p>
+                    <p><strong>Agência:</strong> 1234-5</p>
+                    <p><strong>Conta Corrente:</strong> 98765-4</p>
+                    <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+                    <p><strong>Favorecido:</strong> ONG Esperança Solidária</p>
+                </div>
+                <p class="pix-info"><strong>PIX CNPJ:</strong> 12.345.678/0001-90</p>
+            </div>
+
+            <div class="transparencia">
+                <h3>Transparência Total</h3>
+                <p>Enviamos relatórios mensais detalhando como cada real doado está sendo utilizado. Você pode acompanhar o impacto da sua contribuição.</p>
+                <a href="#" class="btn btn-outline">Ver Relatórios de Prestação de Contas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Ações -->
+    <section class="galeria">
+        <div class="container">
+            <h2>Galeria de Ações</h2>
+            <p class="texto-centralizado">Momentos que marcam nossas atividades</p>
+            <div class="galeria-grid">
+                <figure class="galeria-item">
+                    <img src="images/galeria/acao1.jpg" alt="Distribuição de material escolar">
+                    <figcaption>Distribuição de Material Escolar - Março 2024</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="images/galeria/acao2.jpg" alt="Campanha de vacinação">
+                    <figcaption>Campanha de Vacinação - Fevereiro 2024</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="images/galeria/acao3.jpg" alt="Festa junina comunitária">
+                    <figcaption>Festa Junina Comunitária - Junho 2024</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="images/galeria/acao4.jpg" alt="Plantio de árvores">
+                    <figcaption>Dia Mundial do Meio Ambiente - Junho 2024</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="images/galeria/acao5.jpg" alt="Oficina de música">
+                    <figcaption>Apresentação Musical dos Alunos - Abril 2024</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="images/galeria/acao6.jpg" alt="Natal solidário">
+                    <figcaption>Natal Solidário 2023</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-sobre">
+                    <h3>ONG Esperança Solidária</h3>
+                    <p>Transformando vidas desde 2012. Trabalhamos por um mundo mais justo e solidário.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="cadastro.html">Voluntariado</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Receba nossas novidades:</p>
+                    <form action="#" method="post">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit" class="btn btn-small">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ONG Esperança Solidária. Todos os direitos reservados.</p>
+                <p>CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
