@@ -1,0 +1,265 @@
+/* ==========================================
+   SISTEMA DE DESIGN - VARIÁVEIS CSS
+   ========================================== */
+
+:root {
+    /* ========== PALETA DE CORES ========== */
+    
+    /* Cores Primárias */
+    --cor-primaria: #3498db;           /* Azul principal */
+    --cor-primaria-escura: #2980b9;    /* Azul escuro */
+    --cor-primaria-clara: #5dade2;     /* Azul claro */
+    
+    /* Cores Secundárias */
+    --cor-secundaria: #2ecc71;         /* Verde */
+    --cor-secundaria-escura: #27ae60;  /* Verde escuro */
+    --cor-terciaria: #e67e22;          /* Laranja */
+    --cor-destaque: #e74c3c;           /* Vermelho */
+    
+    /* Cores Neutras */
+    --cor-branco: #ffffff;
+    --cor-cinza-100: #f8f9fa;
+    --cor-cinza-200: #ecf0f1;
+    --cor-cinza-300: #bdc3c7;
+    --cor-cinza-400: #95a5a6;
+    --cor-cinza-500: #7f8c8d;
+    --cor-cinza-600: #34495e;
+    --cor-cinza-700: #2c3e50;
+    --cor-preto: #1a1a1a;
+    
+    /* Cores Semânticas */
+    --cor-sucesso: #2ecc71;
+    --cor-erro: #e74c3c;
+    --cor-alerta: #f39c12;
+    --cor-info: #3498db;
+    
+    /* Cores com Transparência */
+    --cor-overlay: rgba(44, 62, 80, 0.9);
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-sombra-forte: rgba(0, 0, 0, 0.25);
+    
+    /* ========== TIPOGRAFIA ========== */
+    
+    /* Famílias de Fonte */
+    --fonte-principal: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --fonte-titulos: 'Poppins', 'Inter', sans-serif;
+    --fonte-mono: 'Fira Code', 'Courier New', monospace;
+    
+    /* Tamanhos de Fonte - Sistema Modular (1.25 - Escala Maior Terceira) */
+    --fonte-xs: 0.75rem;      /* 12px */
+    --fonte-sm: 0.875rem;     /* 14px */
+    --fonte-base: 1rem;       /* 16px */
+    --fonte-md: 1.125rem;     /* 18px */
+    --fonte-lg: 1.25rem;      /* 20px */
+    --fonte-xl: 1.5rem;       /* 24px */
+    --fonte-2xl: 1.875rem;    /* 30px */
+    --fonte-3xl: 2.25rem;     /* 36px */
+    --fonte-4xl: 3rem;        /* 48px */
+    --fonte-5xl: 3.75rem;     /* 60px */
+    
+    /* Pesos de Fonte */
+    --peso-light: 300;
+    --peso-normal: 400;
+    --peso-medium: 500;
+    --peso-semibold: 600;
+    --peso-bold: 700;
+    --peso-extrabold: 800;
+    
+    /* Altura de Linha */
+    --linha-tight: 1.2;
+    --linha-normal: 1.5;
+    --linha-relaxed: 1.75;
+    --linha-loose: 2;
+    
+    /* ========== ESPAÇAMENTO MODULAR (8px base) ========== */
+    --espaco-1: 0.5rem;    /* 8px */
+    --espaco-2: 1rem;      /* 16px */
+    --espaco-3: 1.5rem;    /* 24px */
+    --espaco-4: 2rem;      /* 32px */
+    --espaco-5: 2.5rem;    /* 40px */
+    --espaco-6: 3rem;      /* 48px */
+    --espaco-7: 3.5rem;    /* 56px */
+    --espaco-8: 4rem;      /* 64px */
+    --espaco-10: 5rem;     /* 80px */
+    --espaco-12: 6rem;     /* 96px */
+    --espaco-16: 8rem;     /* 128px */
+    
+    /* ========== BREAKPOINTS ========== */
+    --breakpoint-xs: 320px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+    
+    /* ========== LARGURAS MÁXIMAS ========== */
+    --largura-container: 1200px;
+    --largura-conteudo: 900px;
+    --largura-texto: 700px;
+    
+    /* ========== BORDAS E RAIOS ========== */
+    --borda-radius-sm: 0.25rem;    /* 4px */
+    --borda-radius: 0.5rem;        /* 8px */
+    --borda-radius-md: 0.75rem;    /* 12px */
+    --borda-radius-lg: 1rem;       /* 16px */
+    --borda-radius-xl: 1.5rem;     /* 24px */
+    --borda-radius-full: 9999px;   /* Círculo */
+    
+    --borda-width: 1px;
+    --borda-width-md: 2px;
+    --borda-width-lg: 3px;
+    
+    /* ========== SOMBRAS ========== */
+    --sombra-sm: 0 1px 2px 0 var(--cor-sombra);
+    --sombra: 0 2px 4px 0 var(--cor-sombra);
+    --sombra-md: 0 4px 6px -1px var(--cor-sombra);
+    --sombra-lg: 0 10px 15px -3px var(--cor-sombra);
+    --sombra-xl: 0 20px 25px -5px var(--cor-sombra);
+    --sombra-2xl: 0 25px 50px -12px var(--cor-sombra-forte);
+    --sombra-inner: inset 0 2px 4px 0 var(--cor-sombra);
+    
+    /* ========== TRANSIÇÕES ========== */
+    --transicao-rapida: 150ms ease-in-out;
+    --transicao-normal: 300ms ease-in-out;
+    --transicao-lenta: 500ms ease-in-out;
+    
+    /* Curvas de Animação */
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* ========== Z-INDEX ========== */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    
+    /* ========== TAMANHOS DE ÍCONES ========== */
+    --icone-sm: 1rem;      /* 16px */
+    --icone-base: 1.5rem;  /* 24px */
+    --icone-lg: 2rem;      /* 32px */
+    --icone-xl: 3rem;      /* 48px */
+    
+    /* ========== ALTURA DO HEADER ========== */
+    --altura-header: 80px;
+    --altura-header-mobile: 64px;
+    
+    /* ========== GRID SYSTEM (12 colunas) ========== */
+    --grid-colunas: 12;
+    --grid-gap: var(--espaco-3);
+    --grid-gap-mobile: var(--espaco-2);
+}
+
+/* ========== MODO ESCURO (Opcional) ========== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-fundo-principal: var(--cor-cinza-700);
+        --cor-fundo-secundario: var(--cor-cinza-600);
+        --cor-texto-principal: var(--cor-cinza-100);
+        --cor-texto-secundario: var(--cor-cinza-300);
+    }
+}
+
+/* ========== CLASSES UTILITÁRIAS PARA ESPAÇAMENTO ========== */
+
+/* Margin */
+.m-0 { margin: 0; }
+.m-1 { margin: var(--espaco-1); }
+.m-2 { margin: var(--espaco-2); }
+.m-3 { margin: var(--espaco-3); }
+.m-4 { margin: var(--espaco-4); }
+.m-6 { margin: var(--espaco-6); }
+.m-8 { margin: var(--espaco-8); }
+
+/* Margin Top */
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--espaco-1); }
+.mt-2 { margin-top: var(--espaco-2); }
+.mt-3 { margin-top: var(--espaco-3); }
+.mt-4 { margin-top: var(--espaco-4); }
+.mt-6 { margin-top: var(--espaco-6); }
+.mt-8 { margin-top: var(--espaco-8); }
+
+/* Margin Bottom */
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--espaco-1); }
+.mb-2 { margin-bottom: var(--espaco-2); }
+.mb-3 { margin-bottom: var(--espaco-3); }
+.mb-4 { margin-bottom: var(--espaco-4); }
+.mb-6 { margin-bottom: var(--espaco-6); }
+.mb-8 { margin-bottom: var(--espaco-8); }
+
+/* Padding */
+.p-0 { padding: 0; }
+.p-1 { padding: var(--espaco-1); }
+.p-2 { padding: var(--espaco-2); }
+.p-3 { padding: var(--espaco-3); }
+.p-4 { padding: var(--espaco-4); }
+.p-6 { padding: var(--espaco-6); }
+.p-8 { padding: var(--espaco-8); }
+
+/* ========== CLASSES UTILITÁRIAS PARA TEXTO ========== */
+.texto-xs { font-size: var(--fonte-xs); }
+.texto-sm { font-size: var(--fonte-sm); }
+.texto-base { font-size: var(--fonte-base); }
+.texto-lg { font-size: var(--fonte-lg); }
+.texto-xl { font-size: var(--fonte-xl); }
+.texto-2xl { font-size: var(--fonte-2xl); }
+.texto-3xl { font-size: var(--fonte-3xl); }
+
+.texto-light { font-weight: var(--peso-light); }
+.texto-normal { font-weight: var(--peso-normal); }
+.texto-medium { font-weight: var(--peso-medium); }
+.texto-semibold { font-weight: var(--peso-semibold); }
+.texto-bold { font-weight: var(--peso-bold); }
+
+.texto-centro { text-align: center; }
+.texto-esquerda { text-align: left; }
+.texto-direita { text-align: right; }
+
+/* ========== CLASSES UTILITÁRIAS PARA CORES ========== */
+.texto-primaria { color: var(--cor-primaria); }
+.texto-secundaria { color: var(--cor-secundaria); }
+.texto-sucesso { color: var(--cor-sucesso); }
+.texto-erro { color: var(--cor-erro); }
+.texto-alerta { color: var(--cor-alerta); }
+
+.bg-primaria { background-color: var(--cor-primaria); }
+.bg-secundaria { background-color: var(--cor-secundaria); }
+.bg-cinza-100 { background-color: var(--cor-cinza-100); }
+.bg-cinza-700 { background-color: var(--cor-cinza-700); }
+
+/* ========== CLASSES UTILITÁRIAS DE DISPLAY ========== */
+.flex { display: flex; }
+.flex-coluna { flex-direction: column; }
+.flex-centro { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.flex-entre { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.grid { display: grid; }
+
+.esconder { display: none; }
+.mostrar { display: block; }
+
+/* ========== CLASSES UTILITÁRIAS DE SOMBRA ========== */
+.sombra-sm { box-shadow: var(--sombra-sm); }
+.sombra { box-shadow: var(--sombra); }
+.sombra-md { box-shadow: var(--sombra-md); }
+.sombra-lg { box-shadow: var(--sombra-lg); }
+.sombra-xl { box-shadow: var(--sombra-xl); }
+
+/* ========== CLASSES UTILITÁRIAS DE BORDAS ========== */
+.borda-radius { border-radius: var(--borda-radius); }
+.borda-radius-lg { border-radius: var(--borda-radius-lg); }
+.borda-radius-full { border-radius: var(--borda-radius-full); }

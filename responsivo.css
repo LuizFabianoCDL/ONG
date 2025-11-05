@@ -1,0 +1,539 @@
+/* ==========================================
+   RESPONSIVO.CSS - MEDIA QUERIES
+   ========================================== */
+
+/* ========== 5 BREAKPOINTS OBRIGATÓRIOS ========== */
+
+/* 1. Extra Small - Smartphones (320px - 575px) */
+@media (max-width: 575px) {
+    /* Tipografia */
+    html {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: var(--fonte-3xl);
+    }
+    
+    h2 {
+        font-size: var(--fonte-2xl);
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--espaco-2);
+    }
+    
+    /* Hero */
+    .hero h2 {
+        font-size: var(--fonte-2xl);
+    }
+    
+    .hero p {
+        font-size: var(--fonte-base);
+    }
+    
+    /* Botões */
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Cards */
+    .sobre-card img,
+    .projeto-card img {
+        height: 180px;
+    }
+    
+    /* Formulário */
+    .form-voluntario {
+        padding: var(--espaco-3);
+    }
+    
+    .form-section {
+        padding: var(--espaco-3);
+    }
+    
+    /* Footer */
+    .footer-grid {
+        gap: var(--espaco-4);
+    }
+    
+    .footer-newsletter form {
+        flex-direction: column;
+    }
+}
+
+/* 2. Small - Smartphones Grandes (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    /* Tipografia */
+    html {
+        font-size: 15px;
+    }
+    
+    /* Grid */
+    .sobre-grid,
+    .ajudar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .impacto-grid,
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Hero */
+    .hero h2 {
+        font-size: var(--fonte-3xl);
+    }
+    
+    /* Projetos */
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Galeria */
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 3. Medium - Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tipografia */
+    html {
+        font-size: 16px;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--espaco-4);
+    }
+    
+    /* Header */
+    .header .container {
+        min-height: 72px;
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: 60vh;
+    }
+    
+    .hero h2 {
+        font-size: var(--fonte-4xl);
+    }
+    
+    /* Grids */
+    .sobre-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ajudar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .depoimentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Formulário */
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Projetos Detalhados */
+    .projeto-detalhado {
+        flex-direction: row;
+    }
+    
+    .projeto-imagem {
+        flex: 0 0 45%;
+    }
+    
+    /* Voluntariado */
+    .voluntariado-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Doações */
+    .doacoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 4. Large - Desktops (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    /* Container */
+    .container {
+        max-width: 960px;
+    }
+    
+    /* Hero */
+    .hero h2 {
+        font-size: var(--fonte-5xl);
+    }
+    
+    /* Grids - 3 colunas */
+    .sobre-grid,
+    .projetos-grid,
+    .ajudar-grid,
+    .depoimentos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Impacto - 4 colunas */
+    .impacto-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Projetos Detalhados */
+    .projeto-imagem {
+        flex: 0 0 40%;
+    }
+    
+    /* Voluntariado */
+    .voluntariado-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Doações */
+    .doacoes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Galeria */
+    .galeria-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 5. Extra Large - Desktops Grandes (1280px+) */
+@media (min-width: 1280px) {
+    /* Container */
+    .container {
+        max-width: var(--largura-container);
+    }
+    
+    /* Tipografia maior */
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: 80vh;
+    }
+    
+    /* Espaçamentos maiores */
+    section {
+        padding: var(--espaco-16) 0;
+    }
+    
+    /* Grids otimizados */
+    .sobre-grid,
+    .projetos-grid,
+    .ajudar-grid,
+    .depoimentos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--espaco-6);
+    }
+    
+    .impacto-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--espaco-6);
+    }
+    
+    /* Projeto Detalhado */
+    .projeto-detalhado {
+        padding: var(--espaco-6);
+    }
+    
+    .projeto-imagem img {
+        height: 350px;
+    }
+}
+
+/* ========== ORIENTAÇÃO DO DISPOSITIVO ========== */
+
+/* Paisagem (Landscape) */
+@media (max-width: 1023px) and (orientation: landscape) {
+    /* Reduzir altura do Hero */
+    .hero {
+        min-height: 50vh;
+    }
+    
+    /* Reduzir espaçamentos */
+    section {
+        padding: var(--espaco-4) 0;
+    }
+    
+    /* Compactar header */
+    .header .container {
+        min-height: 56px;
+    }
+}
+
+/* ========== IMPRESSÃO ========== */
+@media print {
+    /* Remover elementos não necessários */
+    .header,
+    .menu-toggle,
+    .hero-buttons,
+    .btn,
+    .footer,
+    .voltar-topo,
+    .filtros {
+        display: none !important;
+    }
+    
+    /* Ajustar para impressão */
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    h1 {
+        font-size: 24pt;
+    }
+    
+    h2 {
+        font-size: 20pt;
+    }
+    
+    h3 {
+        font-size: 16pt;
+    }
+    
+    /* Evitar quebra de página */
+    .card,
+    .sobre-card,
+    .projeto-card {
+        page-break-inside: avoid;
+    }
+    
+    /* Links */
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* ========== PREFERÊNCIAS DO USUÁRIO ========== */
+
+/* Reduzir Movimento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Alto Contraste */
+@media (prefers-contrast: high) {
+    :root {
+        --cor-primaria: #0056b3;
+        --cor-secundaria: #198754;
+        --cor-cinza-700: #000000;
+    }
+    
+    .btn {
+        border-width: 3px;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* ========== BREAKPOINTS ESPECÍFICOS PARA COMPONENTES ========== */
+
+/* Menu Mobile até 1023px */
+@media (max-width: 1023px) {
+    .nav-principal .menu {
+        position: fixed;
+        top: var(--altura-header-mobile);
+        left: -100%;
+        width: 280px;
+        height: calc(100vh - var(--altura-header-mobile));
+    }
+    
+    .nav-principal .menu.ativo {
+        left: 0;
+    }
+}
+
+/* Menu Desktop a partir de 1024px */
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav-principal .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Formulário - Ajustes específicos */
+@media (max-width: 767px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions button {
+        width: 100%;
+    }
+}
+
+/* Cards - Ajustes de altura de imagem */
+@media (min-width: 576px) and (max-width: 767px) {
+    .projeto-card img,
+    .sobre-card img {
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .projeto-card img,
+    .sobre-card img {
+        height: 220px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .projeto-card img,
+    .sobre-card img {
+        height: 240px;
+    }
+}
+
+/* ========== AJUSTES FINOS PARA TABLETS ========== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Otimizar uso do espaço */
+    .hero-buttons {
+        gap: var(--espaco-3);
+    }
+    
+    /* Cards mais compactos */
+    .card-body,
+    .projeto-conteudo {
+        padding: var(--espaco-3);
+    }
+    
+    /* Formulário otimizado */
+    .form-section legend {
+        font-size: var(--fonte-lg);
+    }
+}
+
+/* ========== MODO ESCURO (opcional) ========== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-fundo: #1a1a1a;
+        --cor-surface: #2d2d2d;
+        --cor-texto: #e0e0e0;
+    }
+    
+    body {
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto);
+    }
+    
+    .card,
+    .form-voluntario,
+    .sobre-card {
+        background-color: var(--cor-surface);
+        color: var(--cor-texto);
+    }
+}
+
+/* ========== TELAS MUITO GRANDES (2560px+) ========== */
+@media (min-width: 2560px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    html {
+        font-size: 18px;
+    }
+}
+
+/* ========== DISPOSITIVOS PEQUENOS - AJUSTES EXTRAS ========== */
+@media (max-width: 374px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .container {
+        padding: 0 var(--espaco-1);
+    }
+    
+    .btn {
+        padding: var(--espaco-2) var(--espaco-3);
+        font-size: var(--fonte-sm);
+    }
+}
+
+/* ========== iPAD ESPECÍFICO ========== */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    /* Ajustes específicos para iPad */
+    .container {
+        padding: 0 var(--espaco-6);
+    }
+}
+
+/* ========== IPHONE ESPECÍFICO ========== */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    /* Ajustes para notch do iPhone */
+    .header {
+        padding-top: env(safe-area-inset-top);
+    }
+}

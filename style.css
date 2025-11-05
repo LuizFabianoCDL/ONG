@@ -1,0 +1,411 @@
+/* ==========================================
+   STYLE.CSS - ARQUIVO PRINCIPAL
+   Plataforma ONG Esperança Solidária
+   ========================================== */
+
+/*
+ * ESTRUTURA MODULAR DE CSS
+ * Este arquivo importa todos os módulos CSS na ordem correta
+ * para evitar conflitos de especificidade e garantir carregamento otimizado
+ */
+
+/* ========== 1. VARIÁVEIS E SISTEMA DE DESIGN ========== */
+@import url('variaveis.css');
+
+/* ========== 2. FONTES EXTERNAS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+
+/* ========== 3. BASE E RESET ========== */
+@import url('base.css');
+
+/* ========== 4. LAYOUT ========== */
+@import url('header.css');
+
+/* ========== 5. COMPONENTES ========== */
+@import url('componentes.css');
+
+/* ========== 6. FORMULÁRIO ========== */
+@import url('formulario.css');
+
+/* ========== 7. FOOTER E PÁGINAS ESPECÍFICAS ========== */
+@import url('footer-projetos.css');
+
+/* ========== 8. RESPONSIVIDADE ========== */
+@import url('responsivo.css');
+
+/* ========== 9. UTILITÁRIOS E HELPERS ========== */
+@import url('utilitarios.css');
+
+/* ========== 10. ANIMAÇÕES CUSTOMIZADAS ========== */
+@import url('animacoes.css');
+
+/* ==========================================
+   NOTA: ORDEM DE IMPORTAÇÃO
+   ==========================================
+   
+   A ordem dos imports é CRUCIAL:
+   
+   1. variaveis.css      → Define todas as variáveis CSS
+   2. Fontes             → Carrega fontes do Google
+   3. base.css           → Reset e estilos base
+   4. header.css         → Header e navegação
+   5. componentes.css    → Componentes das páginas
+   6. formulario.css     → Estilos específicos do formulário
+   7. footer-projetos.css → Footer e página de projetos
+   8. responsivo.css     → Media queries
+   9. utilitarios.css    → Classes utilitárias
+   10. animacoes.css     → Animações customizadas
+   
+   ========================================== */
+
+/* ========== ESTILOS ADICIONAIS ESPECÍFICOS ========== */
+
+/* Garantir que tudo funcione sem JavaScript */
+.no-js .menu-toggle {
+    display: none;
+}
+
+.no-js .menu {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+/* Performance - Will Change */
+.projeto-card:hover img,
+.sobre-card:hover,
+.btn:hover {
+    will-change: transform;
+}
+
+/* Otimização de fontes */
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll Snap (opcional) */
+.scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.scroll-snap-section {
+    scroll-snap-align: start;
+}
+
+/* ========== ACESSIBILIDADE ========== */
+
+/* Destacar quando usuário está navegando por teclado */
+body.user-is-tabbing *:focus {
+    outline: 3px solid var(--cor-primaria) !important;
+    outline-offset: 3px;
+}
+
+/* Esconder visualmente mas manter para leitores de tela */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* ========== LOADING E SKELETON ========== */
+
+/* Skeleton Loading */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--cor-cinza-200) 25%,
+        var(--cor-cinza-100) 50%,
+        var(--cor-cinza-200) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--cor-cinza-200);
+    border-top-color: var(--cor-primaria);
+    border-radius: 50%;
+    animation: spinner-rotation 0.8s linear infinite;
+}
+
+@keyframes spinner-rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========== MODAL E OVERLAY ========== */
+
+/* Modal Base */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-overlay);
+    z-index: var(--z-modal);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.ativo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    padding: var(--espaco-4);
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-radius-lg);
+    box-shadow: var(--sombra-2xl);
+    overflow-y: auto;
+    animation: slideInDown 0.3s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-fechar {
+    position: absolute;
+    top: var(--espaco-2);
+    right: var(--espaco-2);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fonte-xl);
+    color: var(--cor-cinza-600);
+    background-color: transparent;
+    border: none;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    transition: all var(--transicao-rapida);
+}
+
+.modal-fechar:hover {
+    color: var(--cor-erro);
+    background-color: var(--cor-cinza-100);
+}
+
+/* ========== TOAST NOTIFICATIONS ========== */
+
+.toast-container {
+    position: fixed;
+    bottom: var(--espaco-4);
+    right: var(--espaco-4);
+    z-index: var(--z-tooltip);
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+}
+
+.toast {
+    min-width: 300px;
+    padding: var(--espaco-3);
+    background-color: var(--cor-cinza-700);
+    color: var(--cor-branco);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-xl);
+    animation: slideInRight 0.3s ease-out;
+}
+
+.toast-sucesso {
+    background-color: var(--cor-sucesso);
+}
+
+.toast-erro {
+    background-color: var(--cor-erro);
+}
+
+.toast-alerta {
+    background-color: var(--cor-alerta);
+}
+
+.toast-info {
+    background-color: var(--cor-info);
+}
+
+/* ========== BREADCRUMB ========== */
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-1);
+    padding: var(--espaco-2) 0;
+    font-size: var(--fonte-sm);
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    margin-left: var(--espaco-1);
+    color: var(--cor-cinza-400);
+}
+
+/* ========== PROGRESS BAR ========== */
+.progress {
+    width: 100%;
+    height: 8px;
+    background-color: var(--cor-cinza-200);
+    border-radius: var(--borda-radius-full);
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    transition: width var(--transicao-lenta);
+}
+
+/* ========== TABELAS RESPONSIVAS ========== */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: var(--espaco-2);
+    text-align: left;
+    border-bottom: 1px solid var(--cor-cinza-200);
+}
+
+th {
+    font-weight: var(--peso-semibold);
+    color: var(--cor-primaria);
+    background-color: var(--cor-cinza-100);
+}
+
+/* ========== ACCORDION ========== */
+.accordion-item {
+    margin-bottom: var(--espaco-2);
+    border: 1px solid var(--cor-cinza-200);
+    border-radius: var(--borda-radius);
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: var(--espaco-3);
+    font-weight: var(--peso-semibold);
+    text-align: left;
+    background-color: var(--cor-cinza-100);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transicao-rapida);
+}
+
+.accordion-header:hover {
+    background-color: var(--cor-cinza-200);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transicao-lenta);
+}
+
+.accordion-content.ativo {
+    max-height: 1000px;
+}
+
+.accordion-body {
+    padding: var(--espaco-3);
+}
+
+/* ========== TABS ========== */
+.tabs {
+    display: flex;
+    gap: var(--espaco-1);
+    border-bottom: 2px solid var(--cor-cinza-200);
+    margin-bottom: var(--espaco-4);
+}
+
+.tab-button {
+    padding: var(--espaco-2) var(--espaco-3);
+    font-weight: var(--peso-medium);
+    color: var(--cor-cinza-600);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--transicao-rapida);
+}
+
+.tab-button:hover {
+    color: var(--cor-primaria);
+}
+
+.tab-button.ativo {
+    color: var(--cor-primaria);
+    border-bottom-color: var(--cor-primaria);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.ativo {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* ========== FINAL ========== */
+
+/* Garantir que o site funcione sem JavaScript */
+@media (scripting: none) {
+    .menu {
+        position: static !important;
+        left: 0 !important;
+    }
+    
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+/* Debug Mode (remover em produção) */
+/* 
+.debug * {
+    outline: 1px solid red;
+}
+*/

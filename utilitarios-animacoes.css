@@ -1,0 +1,591 @@
+/* ==========================================
+   UTILITARIOS.CSS - CLASSES UTILITÁRIAS
+   ========================================== */
+
+/* ========== DISPLAY ========== */
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+
+/* Responsivo */
+@media (max-width: 767px) {
+    .d-md-none { display: none !important; }
+}
+
+@media (min-width: 768px) {
+    .d-md-block { display: block !important; }
+    .d-md-flex { display: flex !important; }
+}
+
+@media (min-width: 1024px) {
+    .d-lg-block { display: block !important; }
+    .d-lg-flex { display: flex !important; }
+}
+
+/* ========== FLEXBOX ========== */
+.flex-row { flex-direction: row !important; }
+.flex-column { flex-direction: column !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+.flex-nowrap { flex-wrap: nowrap !important; }
+
+.justify-start { justify-content: flex-start !important; }
+.justify-center { justify-content: center !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-around { justify-content: space-around !important; }
+
+.align-start { align-items: flex-start !important; }
+.align-center { align-items: center !important; }
+.align-end { align-items: flex-end !important; }
+.align-stretch { align-items: stretch !important; }
+
+.flex-1 { flex: 1 !important; }
+.flex-auto { flex: auto !important; }
+.flex-none { flex: none !important; }
+
+/* ========== GAP ========== */
+.gap-1 { gap: var(--espaco-1) !important; }
+.gap-2 { gap: var(--espaco-2) !important; }
+.gap-3 { gap: var(--espaco-3) !important; }
+.gap-4 { gap: var(--espaco-4) !important; }
+.gap-6 { gap: var(--espaco-6) !important; }
+
+/* ========== WIDTH E HEIGHT ========== */
+.w-25 { width: 25% !important; }
+.w-50 { width: 50% !important; }
+.w-75 { width: 75% !important; }
+.w-100 { width: 100% !important; }
+.w-auto { width: auto !important; }
+
+.h-100 { height: 100% !important; }
+.h-auto { height: auto !important; }
+
+.max-w-100 { max-width: 100% !important; }
+
+/* ========== POSITION ========== */
+.position-static { position: static !important; }
+.position-relative { position: relative !important; }
+.position-absolute { position: absolute !important; }
+.position-fixed { position: fixed !important; }
+.position-sticky { position: sticky !important; }
+
+/* ========== OVERFLOW ========== */
+.overflow-auto { overflow: auto !important; }
+.overflow-hidden { overflow: hidden !important; }
+.overflow-visible { overflow: visible !important; }
+.overflow-scroll { overflow: scroll !important; }
+
+/* ========== BORDER ========== */
+.border { border: 1px solid var(--cor-cinza-300) !important; }
+.border-0 { border: 0 !important; }
+.border-top { border-top: 1px solid var(--cor-cinza-300) !important; }
+.border-bottom { border-bottom: 1px solid var(--cor-cinza-300) !important; }
+
+.rounded { border-radius: var(--borda-radius) !important; }
+.rounded-lg { border-radius: var(--borda-radius-lg) !important; }
+.rounded-full { border-radius: var(--borda-radius-full) !important; }
+.rounded-0 { border-radius: 0 !important; }
+
+/* ========== CURSOR ========== */
+.cursor-pointer { cursor: pointer !important; }
+.cursor-default { cursor: default !important; }
+.cursor-not-allowed { cursor: not-allowed !important; }
+
+/* ========== OPACITY ========== */
+.opacity-0 { opacity: 0 !important; }
+.opacity-25 { opacity: 0.25 !important; }
+.opacity-50 { opacity: 0.5 !important; }
+.opacity-75 { opacity: 0.75 !important; }
+.opacity-100 { opacity: 1 !important; }
+
+/* ========== USER SELECT ========== */
+.user-select-none { user-select: none !important; }
+.user-select-all { user-select: all !important; }
+.user-select-auto { user-select: auto !important; }
+
+/* ========== POINTER EVENTS ========== */
+.pointer-events-none { pointer-events: none !important; }
+.pointer-events-auto { pointer-events: auto !important; }
+
+/* ========== OBJECT FIT ========== */
+.object-cover { object-fit: cover !important; }
+.object-contain { object-fit: contain !important; }
+.object-fill { object-fit: fill !important; }
+
+/* ========== ASPECT RATIO ========== */
+.aspect-square { aspect-ratio: 1 / 1 !important; }
+.aspect-video { aspect-ratio: 16 / 9 !important; }
+.aspect-4-3 { aspect-ratio: 4 / 3 !important; }
+
+/* ========== Z-INDEX ========== */
+.z-0 { z-index: 0 !important; }
+.z-10 { z-index: 10 !important; }
+.z-20 { z-index: 20 !important; }
+.z-30 { z-index: 30 !important; }
+.z-40 { z-index: 40 !important; }
+.z-50 { z-index: 50 !important; }
+
+/* ========== TEXT DECORATION ========== */
+.text-underline { text-decoration: underline !important; }
+.text-no-underline { text-decoration: none !important; }
+.text-line-through { text-decoration: line-through !important; }
+
+/* ========== TEXT TRANSFORM ========== */
+.text-uppercase { text-transform: uppercase !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+/* ========== WHITE SPACE ========== */
+.text-nowrap { white-space: nowrap !important; }
+.text-wrap { white-space: normal !important; }
+
+/* ========== TRUNCATE TEXT ========== */
+.text-truncate {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+/* ========== LINE CLAMP ========== */
+.line-clamp-1 {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.line-clamp-2 {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.line-clamp-3 {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+
+/* ==========================================
+   ANIMACOES.CSS - ANIMAÇÕES CUSTOMIZADAS
+   ========================================== */
+
+/* ========== FADE ANIMATIONS ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== SLIDE ANIMATIONS ========== */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ========== ZOOM ANIMATIONS ========== */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+}
+
+/* ========== ROTATE ANIMATIONS ========== */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+/* ========== BOUNCE ANIMATIONS ========== */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ========== SHAKE ANIMATION ========== */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+/* ========== PULSE ANIMATION ========== */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* ========== FLIP ANIMATION ========== */
+@keyframes flipInX {
+    from {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+/* ========== SWING ANIMATION ========== */
+@keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* ========== TYPING ANIMATION ========== */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* ========== GRADIENT ANIMATION ========== */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ========== SHIMMER ANIMATION ========== */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ========== CLASSES DE ANIMAÇÃO ========== */
+
+/* Fade */
+.animate-fadeIn { animation: fadeIn 0.6s ease-out; }
+.animate-fadeInUp { animation: fadeInUp 0.8s ease-out; }
+.animate-fadeInDown { animation: fadeInDown 0.8s ease-out; }
+.animate-fadeInLeft { animation: fadeInLeft 0.8s ease-out; }
+.animate-fadeInRight { animation: fadeInRight 0.8s ease-out; }
+
+/* Slide */
+.animate-slideInUp { animation: slideInUp 0.6s ease-out; }
+.animate-slideInDown { animation: slideInDown 0.6s ease-out; }
+.animate-slideInLeft { animation: slideInLeft 0.6s ease-out; }
+.animate-slideInRight { animation: slideInRight 0.6s ease-out; }
+
+/* Zoom */
+.animate-zoomIn { animation: zoomIn 0.5s ease-out; }
+
+/* Bounce */
+.animate-bounce { animation: bounce 1s infinite; }
+.animate-bounceIn { animation: bounceIn 0.8s ease-out; }
+
+/* Shake */
+.animate-shake { animation: shake 0.5s ease-out; }
+
+/* Pulse */
+.animate-pulse { animation: pulse 2s infinite; }
+
+/* Rotate */
+.animate-rotate { animation: rotate 2s linear infinite; }
+
+/* Delays */
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+
+/* Durações */
+.animate-fast { animation-duration: 0.3s; }
+.animate-normal { animation-duration: 0.6s; }
+.animate-slow { animation-duration: 1s; }
+.animate-slower { animation-duration: 1.5s; }
+
+/* Infinite */
+.animate-infinite { animation-iteration-count: infinite; }
+
+/* ========== HOVER ANIMATIONS ========== */
+.hover-lift {
+    transition: transform var(--transicao-normal);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+}
+
+.hover-grow {
+    transition: transform var(--transicao-normal);
+}
+
+.hover-grow:hover {
+    transform: scale(1.05);
+}
+
+.hover-shrink {
+    transition: transform var(--transicao-normal);
+}
+
+.hover-shrink:hover {
+    transform: scale(0.95);
+}
+
+.hover-rotate {
+    transition: transform var(--transicao-normal);
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg);
+}
+
+.hover-shadow {
+    transition: box-shadow var(--transicao-normal);
+}
+
+.hover-shadow:hover {
+    box-shadow: var(--sombra-xl);
+}
+
+/* ========== LOADING ANIMATIONS ========== */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--cor-cinza-200);
+    border-top-color: var(--cor-primaria);
+    border-radius: 50%;
+    animation: rotate 0.8s linear infinite;
+}
+
+.dots {
+    display: flex;
+    gap: var(--espaco-1);
+}
+
+.dots span {
+    width: 8px;
+    height: 8px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    animation: pulse 1.4s infinite ease-in-out;
+}
+
+.dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}

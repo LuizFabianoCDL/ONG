@@ -1,0 +1,529 @@
+/* ==========================================
+   FORMULARIO.CSS - ESTILOS DO FORMULÁRIO
+   ========================================== */
+
+/* ========== CONTAINER DO FORMULÁRIO ========== */
+.formulario-cadastro {
+    background-color: var(--cor-cinza-100);
+    padding: var(--espaco-6) 0;
+}
+
+@media (min-width: 768px) {
+    .formulario-cadastro {
+        padding: var(--espaco-8) 0;
+    }
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: var(--espaco-6);
+}
+
+.form-header h2 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--espaco-2);
+}
+
+.form-header p {
+    color: var(--cor-cinza-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========== FORMULÁRIO ========== */
+.form-voluntario {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--cor-branco);
+    padding: var(--espaco-4);
+    border-radius: var(--borda-radius-lg);
+    box-shadow: var(--sombra-md);
+}
+
+@media (min-width: 768px) {
+    .form-voluntario {
+        padding: var(--espaco-6);
+    }
+}
+
+/* ========== SEÇÕES DO FORMULÁRIO ========== */
+.form-section {
+    margin-bottom: var(--espaco-6);
+    padding: var(--espaco-4);
+    background-color: var(--cor-cinza-100);
+    border-radius: var(--borda-radius);
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.form-section:last-of-type {
+    margin-bottom: var(--espaco-4);
+}
+
+.form-section legend {
+    font-size: var(--fonte-xl);
+    font-weight: var(--peso-semibold);
+    color: var(--cor-primaria);
+    margin-bottom: var(--espaco-3);
+    padding: 0 var(--espaco-2);
+}
+
+/* ========== LINHAS E GRUPOS ========== */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espaco-3);
+    margin-bottom: var(--espaco-3);
+}
+
+@media (min-width: 768px) {
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-group-small {
+    grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+    .form-row .form-group-small {
+        max-width: 150px;
+    }
+}
+
+/* ========== LABELS ========== */
+label {
+    display: block;
+    font-size: var(--fonte-base);
+    font-weight: var(--peso-medium);
+    color: var(--cor-cinza-700);
+    margin-bottom: var(--espaco-1);
+    cursor: pointer;
+}
+
+.obrigatorio {
+    color: var(--cor-erro);
+    font-weight: var(--peso-bold);
+}
+
+/* ========== INPUTS ========== */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--espaco-2);
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-base);
+    color: var(--cor-cinza-700);
+    background-color: var(--cor-branco);
+    border: 2px solid var(--cor-cinza-300);
+    border-radius: var(--borda-radius);
+    transition: all var(--transicao-normal);
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="date"]:hover,
+select:hover,
+textarea:hover {
+    border-color: var(--cor-cinza-400);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Placeholder */
+::placeholder {
+    color: var(--cor-cinza-400);
+    opacity: 1;
+}
+
+/* ========== SELECT ========== */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--espaco-2) center;
+    padding-right: var(--espaco-6);
+    cursor: pointer;
+}
+
+select option {
+    padding: var(--espaco-2);
+}
+
+/* ========== TEXTAREA ========== */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: var(--fonte-principal);
+}
+
+/* ========== CHECKBOX E RADIO ========== */
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+}
+
+@media (min-width: 768px) {
+    .checkbox-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.checkbox-label,
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-1);
+    padding: var(--espaco-2);
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    transition: background-color var(--transicao-rapida);
+    font-weight: var(--peso-normal);
+}
+
+.checkbox-label:hover,
+.radio-label:hover {
+    background-color: var(--cor-cinza-100);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--cor-primaria);
+}
+
+/* Label de Termos */
+.checkbox-label.termos {
+    padding: var(--espaco-3);
+    background-color: var(--cor-cinza-100);
+    border-radius: var(--borda-radius);
+    border: 2px solid transparent;
+    transition: all var(--transicao-normal);
+}
+
+.checkbox-label.termos:hover {
+    background-color: var(--cor-branco);
+    border-color: var(--cor-primaria);
+}
+
+.checkbox-label.termos a {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+    font-weight: var(--peso-semibold);
+}
+
+/* ========== VALIDAÇÃO VISUAL ========== */
+
+/* Campo Válido */
+input:valid:not(:placeholder-shown):not([type="checkbox"]):not([type="radio"]),
+select:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+    border-color: var(--cor-sucesso);
+}
+
+/* Campo Inválido */
+input.invalido,
+select.invalido,
+textarea.invalido {
+    border-color: var(--cor-erro);
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+/* Mensagem de Erro */
+.erro-msg {
+    display: none;
+    color: var(--cor-erro);
+    font-size: var(--fonte-sm);
+    margin-top: var(--espaco-1);
+    padding: var(--espaco-1) var(--espaco-2);
+    background-color: rgba(231, 76, 60, 0.1);
+    border-radius: var(--borda-radius);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.erro-msg::before {
+    content: '⚠ ';
+}
+
+/* Contador de Caracteres */
+.contador {
+    font-size: var(--fonte-sm);
+    color: var(--cor-cinza-500);
+    text-align: right;
+    margin-top: var(--espaco-1);
+}
+
+/* ========== AÇÕES DO FORMULÁRIO ========== */
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    margin-top: var(--espaco-6);
+    padding-top: var(--espaco-4);
+    border-top: 2px solid var(--cor-cinza-200);
+}
+
+@media (min-width: 768px) {
+    .form-actions {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .form-actions button {
+        flex: 0 1 auto;
+        min-width: 200px;
+    }
+}
+
+/* ========== MENSAGEM DE SUCESSO ========== */
+.mensagem-sucesso {
+    display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--espaco-6);
+    background-color: var(--cor-branco);
+    border-radius: var(--borda-radius-lg);
+    box-shadow: var(--sombra-xl);
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.sucesso-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaco-3);
+}
+
+.sucesso-icone {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fonte-4xl);
+    color: var(--cor-branco);
+    background: linear-gradient(135deg, var(--cor-sucesso) 0%, var(--cor-secundaria-escura) 100%);
+    border-radius: var(--borda-radius-full);
+    animation: pulse 1s ease-out;
+}
+
+.mensagem-sucesso h3 {
+    color: var(--cor-sucesso);
+    margin: 0;
+}
+
+.mensagem-sucesso p {
+    color: var(--cor-cinza-600);
+    margin: 0;
+}
+
+/* ========== BENEFÍCIOS SECTION ========== */
+.beneficios {
+    background-color: var(--cor-branco);
+    padding: var(--espaco-6) 0;
+}
+
+.beneficios h3 {
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espaco-4);
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espaco-3);
+}
+
+@media (min-width: 576px) {
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .beneficios-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.beneficio-card {
+    padding: var(--espaco-3);
+    text-align: center;
+    background-color: var(--cor-cinza-100);
+    border-radius: var(--borda-radius-lg);
+    transition: all var(--transicao-normal);
+}
+
+.beneficio-card:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-lg);
+}
+
+.beneficio-card .icone {
+    font-size: var(--fonte-4xl);
+    margin-bottom: var(--espaco-2);
+}
+
+.beneficio-card h4 {
+    margin-bottom: var(--espaco-2);
+    color: var(--cor-primaria);
+    transition: color var(--transicao-rapida);
+}
+
+.beneficio-card:hover h4 {
+    color: var(--cor-branco);
+}
+
+.beneficio-card p {
+    font-size: var(--fonte-sm);
+    margin: 0;
+}
+
+.beneficio-card:hover p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* ========== LOADING STATE ========== */
+.btn.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--cor-branco);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========== TOOLTIPS ========== */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--cor-cinza-700);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: var(--espaco-1) var(--espaco-2);
+    border-radius: var(--borda-radius);
+    font-size: var(--fonte-sm);
+    position: absolute;
+    z-index: var(--z-tooltip);
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity var(--transicao-normal);
+}
+
+.tooltip:hover .tooltip-text,
+.tooltip:focus .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ========== ÍCONES DE AJUDA ========== */
+.icone-ajuda {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: var(--espaco-1);
+    font-size: var(--fonte-sm);
+    font-weight: var(--peso-bold);
+    color: var(--cor-branco);
+    background-color: var(--cor-info);
+    border-radius: var(--borda-radius-full);
+    cursor: help;
+}
+
+/* ========== PROGRESS BAR ========== */
+.form-progress {
+    margin-bottom: var(--espaco-4);
+    padding: var(--espaco-3);
+    background-color: var(--cor-cinza-100);
+    border-radius: var(--borda-radius);
+}
+
+.form-progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--cor-cinza-300);
+    border-radius: var(--borda-radius-full);
+    overflow: hidden;
+}
+
+.form-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    border-radius: var(--borda-radius-full);
+    transition: width var(--transicao-lenta);
+}
+
+/* ========== ACESSIBILIDADE - FOCO VISÍVEL ========== */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
