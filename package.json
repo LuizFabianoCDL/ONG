@@ -1,0 +1,17 @@
+{
+  "name": "ong-projeto",
+  "version": "1.0.0",
+  "description": "Projeto de exemplo com práticas de GitFlow, acessibilidade e build para produção.",
+  "scripts": {
+    "dev": "live-server src --port=3000",
+    "build": "bash ./scripts/build.sh",
+    "lint": "echo \"Add your linters here (htmlhint, stylelint, eslint)\"",
+    "test:accessibility": "echo \"Use axe-core, pa11y or similar\""
+  },
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "terser": "^5.17.0",
+    "cssnano-cli": "^1.1.10",
+    "imagemin-cli": "^6.0.0"
+  }
+}
